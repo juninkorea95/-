@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        * {
-            font-family: 'Jua', sans-serif;
-        }
         div {
              text-align: center;
         }
@@ -26,10 +23,10 @@
             font-family: "Times New Roman", Georgia, Serif;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+    /*    h1, h2, h3, h4, h5, h6 {
             font-family: "Playfair Display";
             letter-spacing: 5px;
-        }
+        }    */
         .mycards {
             margin: 20px auto 0px auto;
             width: 95%;
@@ -115,18 +112,18 @@
         .myInput {
             width: 100%;
             font-size: 16px;
-            padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
-            margin-bottom: 12px;}
+            padding: 12px 20px 12px 0px;
+            border: 10px solid #ddd;
+            margin-bottom: ;}
+
         .container
         {
             background-color: darkgreen;
             display: flex;
             justify-content: center;
+            font-family: 'Jua', sans-serif;
         }
-        .mypost {
-            width: 500px;
-        }
+
     </style>
     <script>
     $(document).ready(function () {
@@ -299,7 +296,7 @@
             <p>여러분의 최애 맛집을 공유해주세요!!</p>
             <p class="w3-text-blue-grey w3-large"><b>맛집 이름, 이미지, 별점, 한줄평을 남겨주세요!</p>
             <p>맛집 음식 사진 공유를 위해 이미지 url 남기기는 필수!!❤</p>
-            <form action="/action_page.php" target="_blank">
+            <form action="/action_page.php" target="_blank"></form>
                 <p><input id="name" class="w3-input w3-padding-16" type="text" placeholder="맛집 이름" required name="Name">
                 </p>
                 <p><input id="url" class="w3-input w3-padding-16" type="text" placeholder="이미지 URL" required
