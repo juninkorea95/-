@@ -69,6 +69,9 @@ def signUp():
 @app.route('/signIn')
 def signIn():
     return render_template('sigIn.html')
+@app.route('/indexin')
+def indexin():
+    return render_template('indexin.html')
 
 @app.route('/signUp/give', methods=["POST"])
 def signUpPost():
