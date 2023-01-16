@@ -55,7 +55,7 @@ def food_post():
 # def movie_delete():
 #     num_receive = request.form['num_give']
 #     db.movies.delete_one({'num': int(num_receive)})
-#     return jsonify({'msg': '삭제 완료!'})
+#     return jsonify({'msg': '삭제 완료!'} s)
 
 @app.route("/food", methods=["GET"])
 def food_get():
