@@ -5,25 +5,25 @@ app = Flask(__name__)
 # from bs4 import BeautifulSoup
 
 from pymongo import MongoClient
-client = MongoClient('mongodb+srv://test:sparta@cluster0.m1uahot.mongodb.net/Cluster0?retryWrites=true&w=majority')
+client = MongoClient('mongodb+srv://test:sparta@cluster0.8y9lufi.mongodb.net/Cluster0?retryWrites=true&w=majority')
 db = client.dbsparta
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route("/movie", methods=["POST"])
-def movie_post():
+@app.route("/food", methods=["POST"])
+def food_post():
     name_receive = request.form['name_give']
     url_receive = request.form['url_give']
     star_receive = request.form['star_give']
     comment_receive = request.form['comment_give']
 
-    food_list = list(db.foodie.find({}, {'_id': False}))
-    count = len(food_list) + 1
+    # food_list = list(db.foodie.find({}, {'_id': False}))
+    # count = len(food_list) + 1
 
     doc = {
-        'num': count,
+        # 'num': count,
         'name': name_receive,
         'url': url_receive,
         'star': star_receive,
@@ -39,7 +39,7 @@ def movie_post():
 #     db.movies.delete_one({'num': int(num_receive)})
 #     return jsonify({'msg': '삭제 완료!'})
 
-@app.route("/movie", methods=["GET"])
+@app.route("/food", methods=["GET"])
 def food_get():
     food_list = list(db.foodie.find({}, {'_id': False}))
     return jsonify({'foods': food_list})
