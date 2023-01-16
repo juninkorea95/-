@@ -71,17 +71,6 @@
 
         });
 
-        function set_temp() {
-            $.ajax({
-                type: "GET",
-                url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-                data: {},
-                success: function (response) {
-                    $('#temp').text(response['temp'])
-                }
-            })
-        }
-
         function saveSign() {
             let idGive = $('#id').val()
             let passwordGive = $('#password').val()

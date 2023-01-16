@@ -85,7 +85,7 @@ def signUpPost():
         'password': hashedPassword
     }
     db.users.insert_one(doc)
-    return jsonify({'msg': 'complete sign up!'})
+    return jsonify({'msg': '가입완료!'})
 
 
 @app.route('/signUp/check', methods=["GET"])
