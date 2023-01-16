@@ -213,6 +213,11 @@
             }
         }
 
+        if (localStorage.getItem('userId') == '') {
+            $('#contact').show()
+        }   else {
+            $('#contact').hide()
+        }
 
     </script>
 </head>
