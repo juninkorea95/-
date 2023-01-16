@@ -63,10 +63,10 @@ def food_get():
     food_list.reverse()
     return jsonify({'foods': food_list})
 # 회원 가입 / 로그인
-@app.route('/signUp')
+@app.route('/sigUp')
 def signUp():
     return render_template('sigUp.html')
-@app.route('/signIn')
+@app.route('/sigIn')
 def signIn():
     return render_template('sigIn.html')
 @app.route('/indexin')
