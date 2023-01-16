@@ -13,21 +13,25 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
     <style>
         body {
             font-family: "Times New Roman", Georgia, Serif;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Playfair Display";
-            letter-spacing: 5px;
+        .w3-col-r {
+            font-family: "Cute Font"
         }
+
+        p {
+          margin-bottom: 1.5em;
+        }
+
+
         .mycards {
             margin: 20px auto 0px auto;
             width: 95%;
             max-width: 1200px;
-
-
         }
 
         .mycards > img {
@@ -226,12 +230,12 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
+        <a href="#home" class="w3-bar-item w3-button">오늘 뭐 드실?</a>
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
             <a href="#about" class="w3-bar-item w3-button">About</a>
-            <a href="#myInput" class="w3-bar-item w3-button">Menu</a>
-            <a href="#contact" onclick="open_box()" class="w3-bar-item w3-button" id="contact_button">Contact</a>
+            <a href="#myInput" class="w3-bar-item w3-button">List</a>
+            <a href="#contact" onclick="open_box()" class="w3-bar-item w3-button" id="contact_button">Register</a>
             <a href="/signUp" class="w3-bar-item w3-button">회원가입</a>
             <a href="/signIn" class="w3-bar-item w3-button">로그인</a>
         </div>
@@ -255,18 +259,21 @@
         </div>
 
         <div class="w3-col-r m6 w3-padding-large">
-            <h1 style="text-align:center">최고에 맛집리스트</h1><br>
-            <h5 style="text-align:center">Tradition since 2023</h5><br>
-            <p >대한민국 최고에 식신들이 추천하는 맛집 리스트를 소게 합니다.Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-
+            <h1 style="text-align:center">오늘 뭐 드실?</h1><br>
+            <h5 style="text-align:center">Made by 4조 17.Jan.2023</h5><br>
+            <div class="text">
+                <p><h4>대한민국 최고의 맛잘알들 모여라!!!</h4></p>
+                <p><h4>꽁꽁 숨겨둔 나만의 맛집 리스트를 공유해요!</h4></p>
+                <p><h4>맛집을 모르는 맛알못🤷</h4></p>
+                <p><h4>➡ 관리자 pick! <a href="#recommend">이번 주, 뭐 먹지?"</a> 확인!</h4></p>
+                <p><h4>이 구역 맛잘알 나야 나🕺 </h4></p>
+                <p><h4>➡ 당신의 또간집을 <a href ="#contact">"여기"</a>에 공유해 주세요!</h4></p>
+            </div>
         </div>
     </div>
 
     <h1 class="weekly">이번 주, 뭐 먹지?🍴😋</h1>
-    <div class="image-grid">
+    <div class="image-grid" id="recommend">
         <a img class="image-grid-col-2 image-grid-row-2" href="/home1"><img src="https://img.siksinhot.com/place/1388034044161113.jpg"></a>
 		<a href = "/home2"><img src="https://mblogthumb-phinf.pstatic.net/MjAyMTA4MTZfMTUy/MDAxNjI5MDQwMDI2NzU3.sGwS2MsbNYYToo8Lk1J-f9Fsyr7pjN23xpIsRiXMivIg.pbSXBBMeE513nkUmh0AZ3012GZYLJ-MqB_80H7w-4DAg.JPEG.gina171/1629039860219.jpg?type=w800"></a>
         <a href = "/home3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnRPIbZdgX9bkmztnRCkWjMPBF2S6ti7f6A&usqp=CAU"></a>
