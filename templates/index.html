@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>맛집 소개</title>
+    <title>오늘 뭐 드실?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -127,7 +127,7 @@
             font-size: 16px;
             padding: 12px 20px 12px 0px;
             border: 10px solid #ddd;
-            margin-bottom: ;}
+            margin-bottom: 0px;}
 
         .container
         {
@@ -247,12 +247,12 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button">오늘 뭐 드실?</a>
+        <a href="#home" class="w3-bar-item w3-button">이 페이지를 의사선생님이 싫어합니다.</a>
 
         <div class="w3-right w3-hide-small">
             <a href="#about" class="w3-bar-item w3-button">About</a>
             <a href="#myInput" class="w3-bar-item w3-button">List</a>
-            <a href="#contact" onclick="open_box()" class="w3-bar-item w3-button" id="contact_button">Register</a>
+            <a href="#contact" onclick="open_box()" class="w3-bar-item w3-button" id="contact_button">Add</a>
             <a href="/signUp" class="w3-bar-item w3-button">회원가입</a>
             <a href="/signIn" class="w3-bar-item w3-button">로그인</a>
         </div>
@@ -322,7 +322,7 @@
         <div class="cont" id="contact">
             <p1>맛집 등록</p1>
             <p>여러분의 최애 맛집을 공유해주세요!!</p>
-            <p class="w3-text-blue-grey w3-large"><b>맛집 이름, 이미지, 별점, 한줄평을 남겨주세요!</p>
+            <p class="w3-text-blue-grey w3-large">맛집 이름, 이미지, 별점, 한줄평을 남겨주세요!</p>
             <p>맛집 음식 사진 공유를 위해 이미지 url 남기기는 필수!!❤</p>
             <form action="/action_page.php" target="_blank"></form>
                 <p><input id="name" class="w3-input w3-padding-16" type="text" placeholder="맛집 이름" required name="Name">
