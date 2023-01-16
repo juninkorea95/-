@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>W3.CSS Template</title>
+    <title>맛집 소개</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,6 +12,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         body {
             font-family: "Times New Roman", Georgia, Serif;
@@ -25,12 +26,21 @@
             margin: 20px auto 0px auto;
             width: 95%;
             max-width: 1200px;
+
+
+        }
+
+        .mycards > img {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
         }
 
         body {
             margin: 0;
         }
-
+        /*이번주 머먹지 콜라보*/
         .image-grid {
             --gap: 16px;
             --num-cols: 4;
@@ -59,6 +69,34 @@
             grid-row: span 2;
         }
 
+        /*ab css*/
+        .w3-row {
+            /*background-color: green;*/
+            max-width: 1200px;
+            width: 95%;
+            height: 600px;
+            margin: 50px auto 0px auto ;
+        }
+        .w3-col-l {
+
+            width: 50%;
+            height: 500px;
+            object-fit: cover;
+            background-image: url('https://img.freepik.com/premium-photo/traditional-italian-pasta-with-tomato-sauce-basil-and-cheese-on-the-black-top-down-view-with-copy-space_221774-9134.jpg?w=1380');
+            background-position: center 30%;
+            background-size: cover;
+            border-radius: 10px;
+
+
+        float:left
+        }
+         .w3-col-r {
+            width: 50%;
+            height: 600px;
+
+        float:right
+        }
+
         /* Anything udner 1024px */
         @media screen and (max-width: 1024px) {
             .image-grid {
@@ -81,6 +119,11 @@
             padding: 12px 20px 12px 40px;
             border: 1px solid #ddd;
             margin-bottom: 12px;}
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
 
     </style>
     <script>
@@ -106,11 +149,10 @@
 
                 let temp_html = `
 <li>
-<a href="#">
+<a href="/">
                 <div class="col">
                     <div class="card h-100">
-                        <img src="${url}"
-                            class="card-img-top">
+                        <img src="${url}" class="card-img-top" alt="..." style="height: 270px">
                             <div class="card-body">
                                 <h5 class="card-title">${name}</h5>
                                 <p>${star_img}</p>
@@ -170,6 +212,8 @@
                 }
             }
         }
+
+
     </script>
 </head>
 <body>
@@ -181,8 +225,10 @@
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
             <a href="#about" class="w3-bar-item w3-button">About</a>
-            <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+            <a href="#myInput" class="w3-bar-item w3-button">Menu</a>
             <a href="#contact" onclick="open_box()" class="w3-bar-item w3-button" id="contact_button">Contact</a>
+            <a href="/signUp" class="w3-bar-item w3-button">회원가입</a>
+            <a href="/signIn" class="w3-bar-item w3-button">로그인</a>
         </div>
     </div>
 </div>
@@ -199,24 +245,18 @@
 <div class="w3-content" style="max-width:1100px">
 
     <!-- About Section -->
-    <div class="w3-row w3-padding-64" id="about">
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
-            <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
-                 width="600" height="750">
+    <div class="w3-row" id="about">
+        <div class="w3-col-l">
         </div>
 
-        <div class="w3-col m6 w3-padding-large">
-            <h1 class="w3-center">About Catering</h1><br>
-            <h5 class="w3-center">Tradition since 1889</h5>
-            <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
-                consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-            <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in
+        <div class="w3-col-r m6 w3-padding-large">
+            <h1 style="text-align:center">최고에 맛집리스트</h1><br>
+            <h5 style="text-align:center">Tradition since 2023</h5><br>
+            <p >대한민국 최고에 식신들이 추천하는 맛집 리스트를 소게 합니다.Excepteur sint occaecat cupidatat non proident, sunt in
                 culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
                 temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
         </div>
     </div>
 
@@ -238,7 +278,7 @@
 
     <div class="mycards">
         <ul>
-            <div class="row row-cols-1 row-cols-md-4 g-4" id="cards-box">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="cards-box">
             </div>
         </ul>
     </div>
