@@ -11,6 +11,22 @@ db = client.dbsparta
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/home1')
+def home1():
+    return render_template('index1.html')
+
+@app.route('/home2')
+def home2():
+    return render_template('index2.html')
+@app.route('/home3')
+def home3():
+    return render_template('index3.html')
+@app.route('/home4')
+def home4():
+    return render_template('index4.html')
+@app.route('/home5')
+def home5():
+    return render_template('index5.html')
 
 @app.route("/food", methods=["POST"])
 def food_post():
