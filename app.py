@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, jsonify
+import bcrypt
 app = Flask(__name__)
+
 
 # import requests
 # from bs4 import BeautifulSoup
