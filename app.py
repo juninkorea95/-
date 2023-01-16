@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, jsonify
+from pymongo import MongoClient
+import bcrypt
 app = Flask(__name__)
-
 # import requests
 # from bs4 import BeautifulSoup
 
-from pymongo import MongoClient
 client = MongoClient('mongodb+srv://test:sparta@cluster0.8y9lufi.mongodb.net/Cluster0?retryWrites=true&w=majority')
 db = client.dbsparta
 
