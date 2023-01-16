@@ -19,11 +19,11 @@ def food_post():
     star_receive = request.form['star_give']
     comment_receive = request.form['comment_give']
 
-    # food_list = list(db.foodie.find({}, {'_id': False}))
-    # count = len(food_list) + 1
+    food_list = list(db.foodie.find({}, {'_id': False}))
+    count = len(food_list) + 1
 
     doc = {
-        # 'num': count,
+        'num': count,
         'name': name_receive,
         'url': url_receive,
         'star': star_receive,
@@ -42,6 +42,7 @@ def food_post():
 @app.route("/food", methods=["GET"])
 def food_get():
     food_list = list(db.foodie.find({}, {'_id': False}))
+    food_list.reverse()
     return jsonify({'foods': food_list})
 
 if __name__ == '__main__':
