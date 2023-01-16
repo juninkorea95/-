@@ -25,6 +25,51 @@
             width: 95%;
             max-width: 1200px;
         }
+
+        body {
+            margin: 0;
+        }
+
+        .image-grid {
+            --gap: 16px;
+            --num-cols: 4;
+            --row-height: 300px;
+
+            box-sizing: border-box;
+            padding: var(--gap);
+
+            display: grid;
+            grid-template-columns: repeat(var(--num-cols), 1fr);
+            grid-auto-rows: var(--row-height);
+            gap: var(--gap);
+        }
+
+        .image-grid > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-grid-col-2 {
+            grid-column: span 2;
+        }
+
+        .image-grid-row-2 {
+            grid-row: span 2;
+        }
+
+        /* Anything udner 1024px */
+        @media screen and (max-width: 1024px) {
+            .image-grid {
+                --num-cols: 2;
+                --row-height: 200px;
+            }
+        }
+
+        .weekly {
+            margin-left: 12px;
+        }
+
     </style>
     <script>
     $(document).ready(function () {
@@ -141,6 +186,18 @@
         </div>
     </div>
 
+    <h1 class="weekly">이번 주, 뭐 먹지?🍴😋</h1>
+    <div class="image-grid">
+		<img class="image-grid-col-2 image-grid-row-2" src="https://img.siksinhot.com/place/1388034044161113.jpg" alt="architecture">
+		<img src="https://mblogthumb-phinf.pstatic.net/MjAyMTA4MTZfMTUy/MDAxNjI5MDQwMDI2NzU3.sGwS2MsbNYYToo8Lk1J-f9Fsyr7pjN23xpIsRiXMivIg.pbSXBBMeE513nkUmh0AZ3012GZYLJ-MqB_80H7w-4DAg.JPEG.gina171/1629039860219.jpg?type=w800" alt="architecture">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnRPIbZdgX9bkmztnRCkWjMPBF2S6ti7f6A&usqp=CAU" alt="architecture">
+		<img src="https://mblogthumb-phinf.pstatic.net/MjAyMTA0MDRfMTY2/MDAxNjE3NDY1NDU2NTg4.hCWD6f7I7p4RKn1N6V-8g39p2M2SpWPNBo2V17vstIIg.ayE_Giwylj6gs_Ixem_JzepYB9ydmwO1tIGzlihKLBMg.JPEG.wldbs925/IMG_1911.jpg?type=w800" alt="architecture">
+		<img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAzMjZfMjQz/MDAxNTg1MTg5NDcyNDEz.prgFzFo3fKU9Z_C6_OjfjuT6fo9OO3I1OwMbuKBsRawg.ZnfwSJ5U1cRVHn363yq8Wr2J7Jm7TLaFx1kC3wEDah8g.JPEG.kimi_95/SE-a5ba94d6-3091-4794-b47a-24cb579a2797.jpg?type=w800" alt="architecture">
+
+        <a href="https://www.example.com">
+
+	</div>
+
     <hr>
 
     <!-- Menu Section -->
@@ -149,7 +206,6 @@
         </div>
     </div>
     </div>
-
 
     <hr>
 
